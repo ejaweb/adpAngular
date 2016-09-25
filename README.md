@@ -9,7 +9,7 @@ ADP Angular Assessment
 
 ### Technologies Used
 - Gulp Tasks
-- - Development and Production
+  - Development and Production
 - Babel ES6 Syntax
 - SCSS Compression
 - JS Uglification
