@@ -1,0 +1,39 @@
+<section class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h1>Blog</h1>
+      </div>
+      <div class="col-xs-6 text-right">
+        <div class="select-box">
+          <select class="main-sct" ng-model="vm.prop.lang">
+            <option value="">Language</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container ptb40">
+  <div class="text-center" ng-if="vm.prop.isLoading">
+    <img class="mb15" src="/img/loader.gif" alt="Loading Content...">
+    <p class="mb0">Loading Content...</p>
+  </div>
+  <div class="posts" ng-if="!vm.prop.isLoading">
+    <article ng-repeat="post in vm.data | orderBy: '-date' | filter:{lang:vm.prop.lang}" class="row">
+      <div class="col-xs-12 col-sm-10">
+        <h2><a ng-href="{{ post.url }}" target="_blank">{{ ::post.title }}</a></h2>
+        <p class="categories">in {{ ::post.categories }}</p>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <p class="date">{{ ::post.date | date: 'MM/dd/yyyy' }}</p>
+      </div>
+      <div class="col-xs-12 mt15" ng-if="post.content">
+        <p class="mb0" ng-bind-html="::post.content"></p>
+      </div>
+    </article>
+  </div>
+</div>

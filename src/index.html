@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adpAngular">
+  <head>
+    <title ng-bind="DataFactory.getData('title')"></title>
+    <meta name="description" content="{{ DataFactory.getData('description') }}">
+
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="GlobalCtrl as vm">
+
+    <div ng-include src="'includes/header.html'"></div>
+    <main ui-view></main>
+    <div ng-include src="'includes/footer.html'"></div>
+
+    <!-- inject:js -->
+    <!-- endinject -->
+  </body>
+</html>

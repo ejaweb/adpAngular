@@ -1,0 +1,41 @@
+<section class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 mb25">
+        <h1 class="mt0">Glossary</h1>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="search-box">
+          <input type="text" placeholder="Search" ng-model="vm.prop.searchVal">
+          <button class="main-but" type="button" ng-click="vm.prop.search = vm.prop.searchVal;">OK</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 text-right">
+        <div class="select-box glossary">
+          <select class="main-sct" ng-model="vm.prop.lang">
+            <option value="">Language</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container ptb40">
+  <div class="text-center" ng-if="vm.prop.isLoading">
+    <img class="mb15" src="/img/loader.gif" alt="Loading Content...">
+    <p class="mb0">Loading Content...</p>
+  </div>
+  <div class="posts" ng-if="!vm.prop.isLoading">
+    <article ng-repeat="post in vm.data | orderBy: 'title' | filter:{lang:vm.prop.lang} | filter:{title:vm.prop.search}" class="row">
+      <div class="col-xs-12">
+        <h2><a ng-href="{{ post.url }}" target="_blank">{{ ::post.title }}</a></h2>
+      </div>
+      <div class="col-xs-12 mt15" ng-if="post.content">
+        <p class="mb0" ng-bind-html="::post.content"></p>
+      </div>
+    </article>
+  </div>
+</div>
