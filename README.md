@@ -1,5 +1,7 @@
 # ADP Angular Assessment
 Took the project a step further and made a few noticeable enhancements.
+- Portable NPM Environment
+- Dynamic Gulp Tasks
 - Responsive Design
 - Active Tabs
 - Ajax Loader
