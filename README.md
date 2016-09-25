@@ -1,20 +1,23 @@
 # ADP Angular
 ADP Angular Assessment
 
-### Setup & Install
+### Setup instructions
 `npm run setup`
 
-### Build & View / Test
+### Build and view instructions
 `gulp`
 
-### Technologies Used
-- Angular JS
- - Enterprise structure
- - Modular & Extendable
- - Uses ui-router
+### Technologies utilized
+- Bower
+ - CSS Bootstrap Framework
+ - Angular JS
+  - Enterprise structure
+  - Modular & Extendable
+  - Uses ui-router
 - Gulp Tasks
+ - Babel ES6 Support
  - SCSS Compression
- - JS Uglification + Babel ES6
+ - JS Uglification + Compression
  - Development and Production Tasks
  - Angular Template Caching
  - Minification of Assets
