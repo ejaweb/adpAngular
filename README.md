@@ -1,5 +1,9 @@
-# ADP Angular
-ADP Angular Assessment
+# ADP Angular Assessment
+Took the project a step further and made a few noticeable enhancements.
+- Responsive Design
+- Active Tabs
+- Ajax Loader
+- Added Footer
 
 ### Setup instructions
 `npm run setup`
