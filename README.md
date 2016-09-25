@@ -9,7 +9,7 @@ ADP Angular Assessment
 
 ### Technologies utilized
 - Bower
- - CSS Bootstrap Framework
+ - Bootstrap Framework
  - Angular JS
   - Enterprise structure
   - Modular & Extendable
