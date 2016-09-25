@@ -173,7 +173,7 @@ gulp.task('app:index:prod', () => {
 
 /* WATCH TASKS
 ------------------------------------------------------- */
-gulp.task('watch', () => {
+gulp.task('watch:dev', () => {
   function logEvent(e) {console.log(`${e.path} was ${e.type}`)}
   gulp.watch(app.scss).on('change', (e) => {
     logEvent(e), sequence('app:scss', 'util:browser:reload');
@@ -192,13 +192,13 @@ gulp.task('watch', () => {
 /* BUILD TASKS
 ------------------------------------------------------- */
 gulp.task('build:prod', (cb) => {
-  sequence('util:clean',['vendor:css','vendor:js'],['app:scss','app:js','app:html','app:img'],['app:global:css','app:global:js'],'app:index:prod',cb);
+  sequence('util:clean',['vendor:css','vendor:js'],['app:scss','app:js','app:html','app:img'],['app:global:css','app:global:js'],'app:index:prod','util:browser:sync',cb);
 });
 
 gulp.task('build:dev', (cb) => {
-  sequence('util:clean',['vendor:css','vendor:js'],['app:scss','app:js','app:html','app:img'],'app:index:dev',cb);
+  sequence('util:clean',['vendor:css','vendor:js'],['app:scss','app:js','app:html','app:img'],'app:index:dev','util:browser:sync','watch:dev',cb);
 });
 
 gulp.task('default', (cb) => {
-  sequence('build:dev','util:browser:sync','watch',cb);
+  sequence('build:dev',cb);
 });

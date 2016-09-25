@@ -7,11 +7,14 @@ Took the project a step further and made a few noticeable enhancements.
 - Ajax Loader
 - Added Footer
 
-### Setup instructions
+### Setup instructions:
+`git clone git@github.com:ejaweb/adpAngular.git && cd adpAngular`
 `npm run setup`
 
-### Build and view instructions
+### Build and view:
 `gulp`
+`gulp build:dev`
+`gulp build:prod`
 
 ### Technologies utilized
 - Bower
