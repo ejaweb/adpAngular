@@ -8,15 +8,14 @@ Took the project a step further and made a few noticeable enhancements.
 - Added Footer
 
 ### Setup instructions:
-`git clone git@github.com:ejaweb/adpAngular.git && cd adpAngular`
+1.) `git clone git@github.com:ejaweb/adpAngular.git && cd adpAngular`
 
-`npm run setup`
+2.) `npm run setup`
 
-### Build and view:
+### Build, watch for changes and view:
 `gulp`
 
-`gulp build:dev`
-
+#### Optional build:
 `gulp build:prod`
 
 ### Technologies utilized
