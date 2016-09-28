@@ -12,23 +12,23 @@ Took the project a step further and made a few noticeable enhancements.
 
 2.) `npm run setup`
 
-### Build, watch for changes and view:
+### Build and view instructions: (also watches for file changes):
 `gulp`
 
-#### Optional build:
+#### Optional production build:
 `gulp build:prod`
 
 ### Technologies utilized
-- Bower
- - Bootstrap Framework
- - Angular JS
-  - Enterprise structure
-  - Modular & Extendable
-  - Uses ui-router
-- Gulp Tasks
+- Npm + Bower
+- Angular JS
+ - Enterprise Structure
+ - Modular & Extendable
+ - Using ui-router
+- Twitter Bootstrap Framework
+- Gulp
  - Babel ES6 Support
- - SCSS Compression
- - JS Uglification + Compression
+ - SCSS Minification
+ - JS Uglification + Minification
  - Development and Production Tasks
  - Angular Template Caching
  - Minification of Assets
